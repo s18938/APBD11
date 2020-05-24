@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace APBD11.Models
 {
@@ -19,16 +15,7 @@ namespace APBD11.Models
         public virtual DbSet<Medicament> Medicaments { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }
         public virtual DbSet<Prescription> Prescriptions { get; set; }
-        public virtual DbSet<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=SampleDb;User ID=sa;Password=Passw0rd")
-        //            .UseLazyLoadingProxies();
-        //    }
-        //}
+        public virtual DbSet<PrescriptionMedicament> PrescriptionMedicaments { get; set; }      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
